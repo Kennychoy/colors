@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>COLORS</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/css?family=Chicle" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Chicle', cursive;
+}
+body {
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+}
+
+@media screen and (min-width: 564px) {
+	#wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: 700px;
+		border: 8px solid black;
+		border-radius: 10px;
+		background: white;
+	}
+	#title {
+		height: 15%;
+		display: flex;
+		border-bottom: 3px dotted brown;
+	}
+	#inner-title {
+		margin: auto;
+		font-size: 2.5rem;
+	}
+	#color {
+		height: 50%;
+		border-radius: 50%;
+		border: 5px solid black;
+		display: flex;
+		font-size: 2.5rem;
+	}
+	#circle-msg {
+		margin: auto;
+		background: rgba(255, 255, 255, .5);
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#maskedAns {
+		height: 15%;
+		display: flex;
+		border-top: 3px dotted brown;
+		font-size: 2.5rem;
+	}
+	#inner-maskedAns {
+		margin: auto;
+	}
+	.charAns {
+		border-bottom: 1px solid black;
+		display: inline-block;
+		margin-left: 1.2px;
+		margin-right: 1.2px;
+	}
+	.charAns:hover {
+		cursor: pointer;
+	}
+	
+	@keyframes showingHint {
+		0% {font-size: 2.5rem}
+		50% {font-size: 3rem}
+		100% {font-size: 2.5rem}
+	}
+	
+	#revealAns {
+		color: blue;
+	}
+	.buttons {
+		height: 20.1%;
+		font-size: 2.5rem;
+	}
+	.btns {
+		display: block;
+		width: 100%;
+		height: 33.33%;
+	}
+}
+
+@media screen and (min-width: 400px) and (max-width: 563px){
+	#wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 400px;
+		height: 580px;
+		border: 8px solid black;
+		border-radius: 10px;
+		background: white;
+	}
+	#title {
+		height: 15%;
+		display: flex;
+		border-bottom: 3px dotted brown;
+	}
+	#inner-title {
+		margin: auto;
+		font-size: 2.5rem;
+	}
+	#color {
+		height: 50%;
+		border-radius: 50%;
+		border: 5px solid black;
+		display: flex;
+		font-size: 2.5rem;
+	}
+	#circle-msg {
+		margin: auto;
+		background: rgba(255, 255, 255, .5);
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#maskedAns {
+		height: 15%;
+		display: flex;
+		border-top: 3px dotted brown;
+		font-size: 2.5rem;
+	}
+	#inner-maskedAns {
+		margin: auto;
+	}
+	.charAns {
+		border-bottom: 1px solid black;
+		display: inline-block;
+		margin-left: 1.2px;
+		margin-right: 1.2px;
+	}
+	.charAns:hover {
+		cursor: pointer;
+	}
+	
+	@keyframes showingHint {
+		0% {font-size: 2.5rem}
+		50% {font-size: 3rem}
+		100% {font-size: 2.5rem}
+	}
+	
+	#revealAns {
+		color: blue;
+	}
+	.buttons {
+		height: 20.1%;
+		font-size: 2.5rem;
+	}
+	.btns {
+		display: block;
+		width: 100%;
+		height: 33.33%;
+	}
+}
+
+@media screen and (max-width: 399px){
+	#wrapper {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		width: 95%;
+		height: 90%;
+		border: 8px solid black;
+		border-radius: 10px;
+		background: white;
+	}
+	#title {
+		height: 15%;
+		display: flex;
+		border-bottom: 3px dotted brown;
+	}
+	#inner-title {
+		margin: auto;
+		font-size: 2rem;
+	}
+	#color {
+		height: 50%;
+		border-radius: 50%;
+		border: 5px solid black;
+		display: flex;
+		font-size: 2rem;
+	}
+	#circle-msg {
+		margin: auto;
+		background: rgba(255, 255, 255, .5);
+		padding-left: 1%;
+		padding-right: 1%;
+	}
+	#maskedAns {
+		height: 15%;
+		display: flex;
+		border-top: 3px dotted brown;
+		font-size: 2.5rem;
+	}
+	#inner-maskedAns {
+		margin: auto;
+	}
+	.charAns {
+		border-bottom: 1px solid black;
+		display: inline-block;
+		margin-left: 1.2px;
+		margin-right: 1.2px;
+	}
+	.charAns:hover {
+		cursor: pointer;
+	}
+	
+	@keyframes showingHint {
+		0% {font-size: 2.5rem}
+		50% {font-size: 3rem}
+		100% {font-size: 2.5rem}
+	}
+	
+	#revealAns {
+		color: blue;
+	}
+	.buttons {
+		height: 20.1%;
+		font-size: 1.8rem;
+	}
+	.btns {
+		display: block;
+		width: 100%;
+		height: 33.33%;
+	}
+}
+
+
+</style>
+</head>
+<body>
+<div id="wrapper">
+	<div id="title"><div id="inner-title">Can you tell the name of the color below?</div></div>
+	<div id="color">
+		<div id="circle-msg">Use keyboard to type the answer</div>
+	</div>
+	<div id="maskedAns">
+		<div id="inner-maskedAns">
+
+		</div>
+	</div>
+	<div class="buttons">
+		<button class="btns btn-warning" id="hint">Hint</button>
+		<button class="btns btn-danger" id="showAns">Show Answer</button>
+		<button class="btns btn-success" id="next">Next</button>
+	</div>
+</div>
+<script>
+var colorsArr = ["AliceBlue", "AntiqueWhite", "Aqua", "Aquamarine", "Azure", "Beige", "Bisque", "Black", "BlanchedAlmond", "Blue", "BlueViolet", "Brown", "BurlyWood", "CadetBlue", "Chartreuse", "Chocolate", "Coral", "CornflowerBlue", "Cornsilk", "Crimson", "Cyan", "DarkBlue", "DarkCyan", "DarkGoldenRod", "DarkGray", "DarkGrey", "DarkGreen", "DarkKhaki", "DarkMagenta", "DarkOliveGreen", "DarkOrange", "DarkOrchid", "DarkRed", "DarkSalmon", "DarkSeaGreen", "DarkSlateBlue", "DarkSlateGray", "DarkSlateGrey", "DarkTurquoise", "DarkViolet", "DeepPink", "DeepSkyBlue", "DimGray", "DimGrey", "DodgerBlue", "FireBrick", "FloralWhite", "ForestGreen", "Fuchsia", "Gainsboro", "GhostWhite", "Gold", "GoldenRod", "Gray", "Grey", "Green", "GreenYellow", "HoneyDew", "HotPink", "IndianRed", "Indigo", "Ivory", "Khaki", "Lavender", "LavenderBlush", "LawnGreen", "LemonChiffon", "LightBlue", "LightCoral", "LightCyan", "LightGoldenRodYellow", "LightGray", "LightGrey", "LightGreen", "LightPink", "LightSalmon", "LightSeaGreen", "LightSkyBlue", "LightSlateGray", "LightSlateGrey", "LightSteelBlue", "LightYellow", "Lime", "LimeGreen", "Linen", "Magenta", "Maroon", "MediumAquaMarine", "MediumBlue", "MediumOrchid", "MediumPurple", "MediumSeaGreen", "MediumSlateBlue", "MediumSpringGreen", "MediumTurquoise", "MediumVioletRed", "MidnightBlue", "MintCream", "MistyRose", "Moccasin", "NavajoWhite", "Navy", "OldLace", "Olive", "OliveDrab", "Orange", "OrangeRed", "Orchid", "PaleGoldenRod", "PaleGreen", "PaleTurquoise", "PaleVioletRed", "PapayaWhip", "PeachPuff", "Peru", "Pink", "Plum", "PowderBlue", "Purple", "RebeccaPurple", "Red", "RosyBrown", "RoyalBlue", "SaddleBrown", "Salmon", "SandyBrown", "SeaGreen", "SeaShell", "Sienna", "Silver", "SkyBlue", "SlateBlue", "SlateGray", "SlateGrey", "Snow", "SpringGreen", "SteelBlue", "Tan", "Teal", "Thistle", "Tomato", "Turquoise", "Violet", "Wheat", "White", "WhiteSmoke", "Yellow", "YellowGreen"];
+
+window.addEventListener("mousemove", getBgColor);
+function getBgColor(e){
+	let color = e.offsetX + "" +e.offsetY;
+	if(!color){
+		color == 'white';
+	}
+	if(color.length == 2){
+		color = color + color + color;
+	}
+	if(color.length == 4){
+		color = color + color[0] + color[1];
+	}
+	if(color.length == 5){
+		color = color + color[0];
+	}
+	if(color.length >= 7){
+		color = color.slice(0, 6)
+	}
+	document.querySelector("body").style.backgroundColor = `#${color}`;
+}
+
+window.addEventListener("load", getArrItem.bind(null, callback, false));
+let hintsArr = [];
+let randomIndex = Math.floor((Math.random() * colorsArr.length));
+
+function getArrItem (callback){	
+	document.querySelector("#color").style.backgroundColor = colorsArr[randomIndex];
+	for(let i=0; i<colorsArr[randomIndex].length; i++){
+		let letterDiv = document.createElement("DIV");
+		letterDiv.classList.add("charAns");
+		letterDiv.classList.add("masking");
+		letterDiv.textContent = "*";
+		document.querySelector("#inner-maskedAns").append(letterDiv);
+	}
+	let numOfHints = Math.floor(colorsArr[randomIndex].length / 3);
+	console.log("num Of Hints " + numOfHints)
+	for(let i=0; i<numOfHints; i++){
+		getRandomPos(colorsArr[randomIndex].length)
+	}	
+	callback(randomIndex);
+};
+
+function callback(randomIndex){
+	for(let i=0; i<document.querySelector("#inner-maskedAns").children.length; i++){
+		for(let j=0; j<hintsArr.length; j++){
+			if(hintsArr[j] == i){
+				document.querySelector("#inner-maskedAns").children[i].textContent = colorsArr[randomIndex][hintsArr[j]]
+				document.querySelector("#inner-maskedAns").children[i].style.borderBottom = "none";
+				document.querySelector("#inner-maskedAns").children[i].classList.remove("masking");
+			}
+		}
+	}
+}
+
+function getRandomPos(length){
+	let randomPos = Math.floor(Math.random() * length);
+	if(hintsArr.indexOf(randomPos) == -1){
+		hintsArr.push(randomPos);
+		return hintsArr;
+	} else {
+		getRandomPos(length);
+	}
+}
+
+window.addEventListener("keydown", handleKeyDown)
+
+function handleKeyDown(e) {
+	console.log(e.key)
+	if(e.key.toUpperCase() == e.key.toLowerCase()){
+		document.querySelector("#circle-msg").textContent = "Letters plz"
+	}	
+	if(e.key.length > 1 && e.key != "Backspace"){
+		document.querySelector("#circle-msg").textContent = "No function keys"
+	}
+	if(e.key.length == 1 && e.key.toUpperCase() != e.key.toLowerCase()){
+		document.querySelector(".masking").textContent = e.key;
+		document.querySelector(".masking").classList.add("userInput");
+		document.querySelector(".masking").classList.remove("masking");
+	}
+	if(e.key == "Backspace" && document.querySelector(".userInput") != "null"){
+		let lastInput = document.querySelectorAll(".userInput")[document.querySelectorAll(".userInput").length-1];
+		lastInput.classList.add("masking");
+		lastInput.textContent = "*";
+		lastInput.classList.remove("userInput");
+	}
+}
+
+window.addEventListener("keyup", checkAns);
+
+function checkAns(){
+	if(!document.querySelector(".masking")){
+		window.removeEventListener("keydown", handleKeyDown);
+		let userAns = '';
+		for(let i=0; i < document.querySelector("#inner-maskedAns").children.length; i++){
+			userAns += document.querySelector("#inner-maskedAns").children[i].textContent;
+		}
+		if(userAns == colorsArr[randomIndex]){
+			document.querySelector("#circle-msg").textContent = "Ya! You got it!";
+		} else {
+			showAns();
+		}
+	}
+}
+
+function showAns(){
+	window.removeEventListener("keydown", handleKeyDown);
+	document.querySelector("#hint").removeEventListener("click", hint);
+	let span = document.createElement("SPAN");
+	let spanText = colorsArr[randomIndex];
+	span.id = "revealAns";
+	span.append(spanText);
+	document.querySelector("#circle-msg").innerHTML = "It should be "; 
+	document.querySelector("#circle-msg").append(span);
+}
+
+document.querySelector("#showAns").addEventListener("click", showAns);
+
+document.querySelector("#hint").addEventListener("click", hint);
+
+function hint () {	
+	let randomNum = Math.floor(Math.random() * document.querySelectorAll(".masking").length);
+	document.querySelectorAll(".masking")[randomNum].style.color = 'red';
+	for(let i=0; i<document.querySelector("#inner-maskedAns").children.length; i++){
+		if(document.querySelector("#inner-maskedAns").children[i].style.color == 'red'){
+			document.querySelector("#inner-maskedAns").children[i].textContent = colorsArr[randomIndex][i];
+		}
+	}
+	document.querySelectorAll(".masking")[randomNum].style.animation = "showingHint .3s 0s ease 1 forwards";	
+	document.querySelectorAll(".masking")[randomNum].classList.remove("masking");
+	checkAns();
+}
+
+document.querySelector("#next").addEventListener("click", () => {
+	location.reload();
+});
+</script>
+</body>
+</html>
